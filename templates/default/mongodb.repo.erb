@@ -1,0 +1,10 @@
+<%
+processor = node[:kernel][:machine]
+if processor != "x86_64"
+  processor = "i686"
+end
+%>
+[mongodb]
+name=mongodb Repository
+baseurl=https://www.mongodb.com/download-center/enterprise/releases/archive/<%=processor%>
+gpgcheck=1
